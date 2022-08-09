@@ -1,0 +1,42 @@
+{
+  "name": "@boxfish-studio/candymachine-client-sdk",
+  "version": "0.0.1",
+  "description": "Metaplex Candy Machine Client SDK",
+  "keywords": [
+    "metaplex",
+    "candy-machine",
+    "solana",
+    "nft",
+    "client",
+    "sdk"
+  ],
+  "homepage": "https://boxfish.studio/",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/boxfish-studio/candymachine-client-sdk.git"
+  },
+  "bugs": {
+    "url": "http://github.com/boxfish-studio/candymachine-client-sdk.git/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "compile": "tsc"
+  },
+  "author": "Boxfish Studio <info@boxfish.studio>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@metaplex/arweave-cost": "^1.0.4",
+    "@project-serum/anchor": "^0.25.0",
+    "@solana/spl-token": "^0.2.0",
+    "@solana/web3.js": "^1.50.1",
+    "@supercharge/promise-pool": "^2.3.2",
+    "js-file-download": "^0.4.12"
+  }
+}
