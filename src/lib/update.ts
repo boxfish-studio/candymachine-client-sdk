@@ -2,6 +2,19 @@ import { Program } from "@project-serum/anchor";
 import { PublicKey } from "@solana/web3.js";
 import { ICache, saveCache } from "./cache";
 
+/**
+ * 
+ * Updates a given candy machine with the new settings passed and cache. 
+ * At the end of the update, the updated cache can be downloaded.
+ * @newSettings The new settings to update the candy machine with.
+ * @candyMachinePubkey The public key of the candy machine to update.
+ * @publicKey The public key of the authority of the candy machine
+ * @treasuryWallet The public key of the treasury wallet
+ * @anchorProgram The program that is used to update the candy machine.
+ * @cache The cache to update the candy machine with.
+ * @newAuthority (Optional) The new authority of the candy machine.
+ */
+
 export async function updateV2({
   newSettings,
   candyMachinePubkey,

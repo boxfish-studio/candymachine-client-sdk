@@ -12,6 +12,13 @@ import { JSON_EXTENSION } from '../constants'
 import { getAtaForMint } from '../mint/helpers'
 import {  parseDate } from './helpers'
 
+/**
+ * Loads the candy program v2..
+ * @param provider The anchor provider.
+ * @param customRpcUrl (Optional) The custom rpc url of the candy machine.
+ * @returns The IDL.
+ * 
+ */
 export async function loadCandyProgramV2(provider: anchor.Provider, customRpcUrl?: string) {
     if (customRpcUrl) console.log('USING CUSTOM URL', customRpcUrl)
     const idl = (await anchor.Program.fetchIdl(CANDY_MACHINE_PROGRAM_V2_ID, provider)) as anchor.Idl
@@ -20,7 +27,13 @@ export async function loadCandyProgramV2(provider: anchor.Provider, customRpcUrl
     console.log('program id from anchor', program.programId.toBase58())
     return program
 }
-
+/**
+ *  Get the candy machine settings.
+ * @param walletKeyPair The wallet key pair.
+ * @param configForm  The config form.
+ * @param anchorProgram  The anchor program.
+ * @returns  The settings of the candy machine.
+ */
 export async function getCandyMachineV2Config(
     walletKeyPair: PublicKey,
     configForm: ICandyMachineConfig,

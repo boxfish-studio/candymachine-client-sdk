@@ -59,7 +59,17 @@ function estimateManifestSize(filenames: string[]) {
     console.log('Estimated manifest size:', data.length)
     return data.length
 }
-
+/**
+ * Uploads the NFTs and their metadata to the Arweave network.
+ * @param walletKeyPair - keypair of the wallet to use for the mint transaction
+ * @param anchorProgram  - anchor program to use for the mint transaction
+ * @param env  - environment to use for the mint transaction (mainnet-beta, devnet, testnet)
+ * @param image  - image to upload
+ * @param manifestBuffer  - buffer of the manifest to upload
+ * @param manifest  - manifest to upload
+ * @param index  - index of the image to upload
+ * @returns  - The links for the manifest and the image in Arweave.
+ */
 export async function arweaveUpload(
     walletKeyPair: AnchorWallet,
     anchorProgram: anchor.Program,
