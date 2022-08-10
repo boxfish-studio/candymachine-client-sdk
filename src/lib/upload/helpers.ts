@@ -18,7 +18,6 @@ export function parseDate(date: string) {
     }
     return Date.parse(date) / 1000
 }
-
 export function sleep(milliseconds: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, milliseconds))
 }
