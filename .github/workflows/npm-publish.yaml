@@ -17,7 +17,14 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: pnpm install --frozen-lockfile
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7.1.0
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
       - run: pnpm compile
       - run: pnpm publish --access=public
         env:
