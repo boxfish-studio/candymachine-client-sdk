@@ -21,6 +21,11 @@ import { createCandyMachineV2, getFileExtension, getFileName, sleep } from './he
 type AssetKey = { mediaExt: string; index: string }
 type Env = 'mainnet-beta' | 'devnet'
 
+/**
+ * 
+ * Upload a new candy machine with the settings passed and cache. 
+ * At the end of the upload, the cache can be downloaded.
+ */
 export async function uploadV2({
     files,
     cacheName,
