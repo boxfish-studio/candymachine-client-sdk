@@ -160,7 +160,7 @@ async function simulateTransaction(
     return res.result
 }
 /**
- *  Waits for a transaction to be confirmed.
+ * Wait for a transaction to be confirmed.
  * @param txid The transaction id to await confirmation for.
  * @param timeout  The timeout in milliseconds.
  * @param connection  The connection to the cluster.
