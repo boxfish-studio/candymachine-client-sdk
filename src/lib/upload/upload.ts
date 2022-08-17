@@ -350,7 +350,7 @@ async function writeIndices({
     cacheName: string
     env: string
     candyMachine: PublicKey
-    walletKeyPair: AnchorWallet
+    walletKeyPair: any
     rateLimit: number | null
 }) {
     let uploadSuccessful = true
