@@ -1,6 +1,5 @@
 import { calculate } from '@metaplex/arweave-cost'
 import * as anchor from '@project-serum/anchor'
-import { AnchorWallet } from '@solana/wallet-adapter-react'
 import { ARWEAVE_PAYMENT_WALLET, ARWEAVE_UPLOAD_ENDPOINT,JSON_EXTENSION } from '../constants'
 import { Manifest } from '../types'
 import { getFileExtension } from './helpers'
@@ -61,7 +60,7 @@ function estimateManifestSize(filenames: string[]) {
 }
 
 export async function arweaveUpload(
-    walletKeyPair: AnchorWallet,
+    walletKeyPair: any,
     anchorProgram: anchor.Program,
     env: string,
     image: File,

@@ -1,4 +1,3 @@
-import { AnchorWallet } from '@solana/wallet-adapter-react'
 import {
     Blockhash,
     Commitment,
@@ -21,7 +20,7 @@ interface IBlockhashAndFeeCalculator {
 
 export const sendTransactionWithRetryWithKeypair = async (
     connection: Connection,
-    wallet: AnchorWallet,
+    wallet: any,
     instructions: TransactionInstruction[],
     commitment: Commitment = 'singleGossip',
     block?: IBlockhashAndFeeCalculator,

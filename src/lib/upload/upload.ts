@@ -1,5 +1,4 @@
 import { BN, Program, web3 } from '@project-serum/anchor'
-import { AnchorWallet } from '@solana/wallet-adapter-react'
 import { PublicKey } from '@solana/web3.js'
 import { PromisePool } from '@supercharge/promise-pool'
 import { ICache, saveCache } from 'lib/cache'
@@ -88,7 +87,7 @@ export async function uploadV2({
         hash: Uint8Array
     }
     // uuid: string;
-    walletKeyPair: AnchorWallet
+    walletKeyPair: any
     anchorProgram: Program
     // arweaveJwk: string;
     rateLimit: number | null
@@ -351,7 +350,7 @@ async function writeIndices({
     cacheName: string
     env: string
     candyMachine: PublicKey
-    walletKeyPair: AnchorWallet
+    walletKeyPair: any
     rateLimit: number | null
 }) {
     let uploadSuccessful = true
