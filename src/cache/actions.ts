@@ -29,6 +29,13 @@ import { ICache } from './interfaces'
 //   return JSON.parse(fs.readFileSync(path).toString());
 // }
 
+/**
+ * Save the cache to the cache path.
+ * @param cacheName The name of the cache to save.
+ * @param env The environment used 'mainnet-beta' | 'devnet' | 'testnet'
+ * @param cacheContent The content of the cache to save.
+ */
+
 export function saveCache(cacheName: string, env: string, cacheContent: ICache) {
     cacheContent.env = env
     cacheContent.cacheName = cacheName
