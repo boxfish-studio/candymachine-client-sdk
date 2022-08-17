@@ -6,7 +6,11 @@ import {
     CONFIG_LINE_SIZE_V2,
 } from '../constants'
 import { ICandyMachineData } from '../interfaces'
-
+/**
+ * Parse a date.
+ * @param date The date to parse.
+ * @returns  The parsed date.
+ */
 export function parseDate(date: string) {
     if (date === 'now') {
         return Date.now() / 1000
@@ -21,7 +25,14 @@ export function sleep(milliseconds: number): Promise<void> {
 export function uuidFromConfigPubkey(configAccount: PublicKey) {
     return configAccount.toBase58().slice(0, 6)
 }
-
+/** 
+ * Create a candy machine v2.
+ * @param anchorProgram The anchor program to use.
+ * @param payerWallet  The payer wallet to use.
+ * @param treasuryWallet  The treasury wallet to use.
+ * @param candyData  The candy machine data to use.
+ * @returns  The config account.
+ */
 export const createCandyMachineV2 = async function (
     anchorProgram: anchor.Program,
     payerWallet: any,
@@ -84,6 +95,14 @@ export const createCandyMachineV2 = async function (
     return cmCreation
 }
 
+/**
+ * Create a candy machine v2 account.
+ * @param anchorProgram The anchor program to use. 
+ * @param candyData    The candy machine data to use.
+ * @param payerWallet  The payer wallet to use.
+ * @param candyAccount  The candy machine account to use.
+ * @returns  The instruction to create the candy machine account.
+ */
 export async function createCandyMachineV2Account(
     anchorProgram: anchor.Program,
     candyData: ICandyMachineData,

@@ -17,7 +17,16 @@ interface IBlockhashAndFeeCalculator {
     blockhash: Blockhash
     lastValidBlockHeight: number
 }
-
+/**
+ * Attempt to send a transaction to the network.
+ * @param connection  The connection to the cluster.
+ * @param wallet  The wallet to use for signing.
+ * @param instructions  The instructions to sign.
+ * @param commitment  The commitment to use for the transaction.
+ * @param block  The blockhash to use for the transaction.
+ * @param beforeSend  The function to call before sending the transaction.
+ * @returns  The transaction signature.
+ */
 export const sendTransactionWithRetryWithKeypair = async (
     connection: Connection,
     wallet: any,
@@ -43,7 +52,12 @@ export const sendTransactionWithRetryWithKeypair = async (
 
     return { txid, slot }
 }
-
+/**
+ * Attempt to send a signed transaction to the network.
+ * @param signedTransaction The signed transaction to send. 
+ * @param connection The connection to the cluster.
+ * @returns  The transaction id and slot.
+ */
 export async function sendSignedTransaction({
     signedTransaction,
     connection,
@@ -118,7 +132,13 @@ export async function sendSignedTransaction({
     console.log('Latency (ms)', txid, getUnixTs() - startTime)
     return { txid, slot }
 }
-
+/**
+ * Simualate a transaction.
+ * @param connection The connection to the cluster.
+ * @param transaction  The transaction to simulate.
+ * @param commitment  The commitment to use for the transaction.
+ * @returns  The simulated transaction response.
+ */
 async function simulateTransaction(
     connection: Connection,
     transaction: Transaction,
@@ -138,7 +158,15 @@ async function simulateTransaction(
     }
     return res.result
 }
-
+/**
+ * Wait for a transaction to be confirmed.
+ * @param txid The transaction id to await confirmation for.
+ * @param timeout  The timeout in milliseconds.
+ * @param connection  The connection to the cluster.
+ * @param commitment  The commitment to use for the transaction.
+ * @param queryStatus  Whether to query the status of the transaction.
+ * @returns  The transaction signature.
+ */
 export async function awaitTransactionSignatureConfirmation(
     txid: TransactionSignature,
     timeout: number,
@@ -231,7 +259,10 @@ export enum SequenceType {
     Parallel,
     StopOnFailure,
 }
-
+/**
+ * Execute a sequence of transactions.
+ * @returns  The transaction signature.
+ */
 export const sendTransactions = async (
     connection: Connection,
     wallet: any,
