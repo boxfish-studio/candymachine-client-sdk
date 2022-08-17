@@ -63,7 +63,7 @@ const getCollectionAuthorityRecordPDA = async (
   )[0];
 };
 /**
- * Creates the associated token account for a mint.
+ * Create the associated token account for a mint.
  * @param candyMachine The candy machine to get the mint of.
  * @param payer  The payer to pay for the transaction.
  * @returns The associated token account for a mint.
