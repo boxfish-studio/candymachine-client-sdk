@@ -1,6 +1,6 @@
 {
   "name": "@boxfish-studio/candymachine-client-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Metaplex Candy Machine Client SDK",
   "keywords": [
     "metaplex",
@@ -22,7 +22,7 @@
     "access": "public"
   },
   "main": "./dist/index.js",
-  "types": "./dist/**/*.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "compile": "tsc"
   },
