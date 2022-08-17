@@ -54,7 +54,7 @@ export const sendTransactionWithRetryWithKeypair = async (
     return { txid, slot }
 }
 /**
- *  Attempts to send a signed transaction to the network.
+ * Attempt to send a signed transaction to the network.
  * @param signedTransaction The signed transaction to send. 
  * @param connection The connection to the cluster.
  * @returns  The transaction id and slot.
