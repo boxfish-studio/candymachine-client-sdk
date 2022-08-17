@@ -134,7 +134,7 @@ export async function sendSignedTransaction({
     return { txid, slot }
 }
 /**
- * Simualates a transaction.
+ * Simualate a transaction.
  * @param connection The connection to the cluster.
  * @param transaction  The transaction to simulate.
  * @param commitment  The commitment to use for the transaction.
