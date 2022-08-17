@@ -30,7 +30,7 @@ import { ICache } from './interfaces'
 // }
 
 /**
- * Saves the cache to the cache path.
+ * Save the cache to the cache path.
  * @param cacheName The name of the cache to save.
  * @param env The environment used 'mainnet-beta' | 'devnet' | 'testnet'
  * @param cacheContent The content of the cache to save.
