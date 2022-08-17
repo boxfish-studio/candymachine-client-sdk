@@ -1,6 +1,6 @@
 {
   "name": "@boxfish-studio/candymachine-client-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Metaplex Candy Machine Client SDK",
   "keywords": [
     "metaplex",
