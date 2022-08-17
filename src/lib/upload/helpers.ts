@@ -27,7 +27,7 @@ export function uuidFromConfigPubkey(configAccount: PublicKey) {
     return configAccount.toBase58().slice(0, 6)
 }
 /** 
- *  Creates a candy machine v2.
+ * Create a candy machine v2.
  * @param anchorProgram The anchor program to use.
  * @param payerWallet  The payer wallet to use.
  * @param treasuryWallet  The treasury wallet to use.
