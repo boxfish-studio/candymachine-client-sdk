@@ -1,7 +1,7 @@
 import { BN, Program, web3 } from '@project-serum/anchor'
 import { PublicKey } from '@solana/web3.js'
 import { PromisePool } from '@supercharge/promise-pool'
-import { ICache, saveCache } from 'cache'
+import { ICache, saveCache } from './../cache'
 import { StorageType } from '../enums'
 import { JSON_EXTENSION } from '../constants'
 // import {
