@@ -28,7 +28,7 @@ export async function loadCandyProgramV2(provider: anchor.Provider, customRpcUrl
     return program
 }
 /**
- *  Get the candy machine settings.
+ * Get the candy machine settings.
  * @param walletKeyPair The wallet key pair.
  * @param configForm  The config form.
  * @param anchorProgram  The anchor program.
