@@ -13,7 +13,7 @@ import { getAtaForMint } from '../mint/helpers'
 import {  parseDate } from './helpers'
 
 /**
- * Loads the candy program v2..
+ * Load the candy program v2..
  * @param provider The anchor provider.
  * @param customRpcUrl (Optional) The custom rpc url of the candy machine.
  * @returns The IDL.
