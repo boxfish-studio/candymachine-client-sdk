@@ -25,7 +25,7 @@ import {
 import { sendTransactions, SequenceType } from "../upload/transactions";
 
 /**
- *  Get the collection PDA from a Candy Machine Account.
+ * Get the collection PDA from a Candy Machine Account.
  * @param candyMachineAddress The address of the candy machine.
  * @returns The collection PDA from a candy Machine
  */
