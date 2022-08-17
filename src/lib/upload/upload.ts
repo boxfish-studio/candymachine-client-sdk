@@ -24,7 +24,7 @@ type Env = 'mainnet-beta' | 'devnet'
 
 /**
  * 
- * Uploads a new candy machine with the settings passed and cache. 
+ * Upload a new candy machine with the settings passed and cache. 
  * At the end of the upload, the cache can be downloaded.
  */
 export async function uploadV2({
