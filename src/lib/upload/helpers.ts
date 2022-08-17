@@ -1,5 +1,4 @@
 import * as anchor from '@project-serum/anchor'
-import { AnchorWallet } from '@solana/wallet-adapter-react'
 import { Keypair, PublicKey, SystemProgram } from '@solana/web3.js'
 import {
     CANDY_MACHINE_PROGRAM_V2_ID,
@@ -25,7 +24,7 @@ export function uuidFromConfigPubkey(configAccount: PublicKey) {
 
 export const createCandyMachineV2 = async function (
     anchorProgram: anchor.Program,
-    payerWallet: AnchorWallet,
+    payerWallet: any,
     treasuryWallet: PublicKey,
     // splToken: PublicKey,
     candyData: ICandyMachineData
