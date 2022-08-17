@@ -4,7 +4,7 @@ import { ICache, saveCache } from "./cache";
 
 /**
  * 
- * Updates a given candy machine with the new settings passed and cache. 
+ * Update a given candy machine with the new settings passed and cache. 
  * At the end of the update, the updated cache can be downloaded.
  * @newSettings The new settings to update the candy machine with.
  * @candyMachinePubkey The public key of the candy machine to update.
