@@ -17,9 +17,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm run build
-      - run: npm run package
-      - run: cd package && npm publish --access=public
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm compile
+      - run: pnpm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
