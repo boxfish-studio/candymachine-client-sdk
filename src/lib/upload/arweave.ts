@@ -60,7 +60,7 @@ function estimateManifestSize(filenames: string[]) {
     return data.length
 }
 /**
- * Uploads the NFTs and their metadata to the Arweave network.
+ * Upload the NFTs and their metadata to the Arweave network.
  * @param walletKeyPair - keypair of the wallet to use for the mint transaction
  * @param anchorProgram  - anchor program to use for the mint transaction
  * @param env  - environment to use for the mint transaction (mainnet-beta, devnet, testnet)
