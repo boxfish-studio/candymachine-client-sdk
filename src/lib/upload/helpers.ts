@@ -97,7 +97,7 @@ export const createCandyMachineV2 = async function (
 }
 
 /**
- *  Creates a candy machine v2 account.
+ * Create a candy machine v2 account.
  * @param anchorProgram The anchor program to use. 
  * @param candyData    The candy machine data to use.
  * @param payerWallet  The payer wallet to use.
