@@ -19,7 +19,7 @@ interface IBlockhashAndFeeCalculator {
     lastValidBlockHeight: number
 }
 /**
- * Attempts to send a transaction to the network.
+ * Attempt to send a transaction to the network.
  * @param connection  The connection to the cluster.
  * @param wallet  The wallet to use for signing.
  * @param instructions  The instructions to sign.
