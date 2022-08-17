@@ -1,1 +1,0 @@
-# candymachine-client-sdk
