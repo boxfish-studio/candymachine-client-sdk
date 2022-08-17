@@ -8,7 +8,7 @@ import {
 } from '../constants'
 import { ICandyMachineData } from '../interfaces'
 /**
- *  Parses a date.
+ * Parse a date.
  * @param date The date to parse.
  * @returns  The parsed date.
  */
