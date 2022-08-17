@@ -27,10 +27,10 @@ Candymachine Client SDK brings to the table the functions, types and other items
 
 ### Built with
 
-- NextJS.
-- Typescript.
-- Primer CSS.
-- Recoil
+- Typescript
+- Metaplex
+- Anchor from Serum
+- Solana web3.js
 
 <br/>
 
@@ -143,3 +143,8 @@ async function createCandyMachineV2() {
     }
 
 ```
+
+## Acknowledgements
+
+This SDK has been built thanks to Metaplex's Candy Machine CLI.
+
