@@ -261,7 +261,7 @@ export enum SequenceType {
     StopOnFailure,
 }
 /**
- *  Executes a sequence of transactions.
+ * Execute a sequence of transactions.
  * @returns  The transaction signature.
  */
 export const sendTransactions = async (
