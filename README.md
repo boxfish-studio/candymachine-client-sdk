@@ -1,7 +1,6 @@
 
 <h1 align="center">Candymachine Client SDK</h1>
 <p align="center">A full-featured Solana Metaplex Candymachine client-side library in Typescript</p>
-<br/>
 
 ## About
 
