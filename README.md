@@ -4,7 +4,7 @@
 
 > **Disclaimer:** The SDK is currently a pre-alpha version and under devlopment
 
-### About
+## About
 
 The Candymachine Client SDK offers all functionalities of the former Metaplex Candy Machine CLI but on a standalone pure Typescript client-side library that can run on any browser.
 
