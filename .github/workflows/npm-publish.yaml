@@ -5,8 +5,8 @@ name: Candymachine Client SDK Publish
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - v*
 
 jobs:
   publish-npm:
