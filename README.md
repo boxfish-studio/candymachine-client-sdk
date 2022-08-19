@@ -2,7 +2,7 @@
 <h1 align="center">Candymachine Client SDK</h1>
 <p align="center">A full-featured Solana Metaplex Candymachine client-side library in Typescript</p>
 
-> **Disclaimer:** The SDK is currently a pre-alpha version and under devlopment
+> **Disclaimer:** The SDK is a pre-alpha version and currently under development
 
 ## About
 
