@@ -1,14 +1,13 @@
-# Candymachine Client SDK
 
+<h1 align="center">Candymachine Client SDK</h1>
+<p align="center">A full-featured Solana Metaplex Candymachine client-side library in Typescript</p>
 <br/>
 
-## Pre-alpha version
+## About
 
-Candymachine Client SDK is currently under development and in pre-alpha version.
+The Candymachine Client SDK offers all functionalities of the former Metaplex Candy Machine CLI but on a standalone pure Typescript client-side library that can run on any browser.
 
-## About The Project
-
-Candymachine Client SDK brings to the table the functions, types and other items from the Candy Machine CLI to be compatible with the browser.
+> **Disclaimer:** The SDK is currently a pre-alpha version and under devlopment
 
 ### Features
 
@@ -147,4 +146,10 @@ async function createCandyMachineV2() {
 ## Acknowledgements
 
 This SDK has been built thanks to Metaplex's Candy Machine CLI.
+
+## License
+
+[Apache 2.0](./LICENSE) &copy; [Boxfish Studio]
+
+[Boxfish Studio]: https://boxfish.studio
 
