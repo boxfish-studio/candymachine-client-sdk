@@ -3,8 +3,8 @@ export const SUPPORTED_ANIMATION_TYPES = [
 	'video/mp4',
 	'video/quicktime',
 	'audio/mpeg',
-	'audio/x-flac',
 	'audio/wav',
+	'audio/x-flac',
 	'model/gltf-binary',
 	'text/html',
 ]
