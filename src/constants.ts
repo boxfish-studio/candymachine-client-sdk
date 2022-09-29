@@ -1,3 +1,5 @@
+import { PublicKey } from '@solana/web3.js'
+
 export const SUPPORTED_IMAGE_TYPES = ['image/png', 'image/gif', 'image/jpeg']
 export const SUPPORTED_ANIMATION_TYPES = [
 	'video/mp4',
@@ -18,7 +20,6 @@ export const JSON_EXTENSION = 'application/json'
 export const DEFAULT_TIMEOUT = 30000
 export const NOTIFICATION_TIMEOUT_NEVER = -1
 export const NOTIFICATION_TIMEOUT_DEFAULT = 5000
-import { PublicKey } from '@solana/web3.js'
 export const CANDY_MACHINE = 'candy_machine'
 export const AUCTION_HOUSE = 'auction_house'
 export const TOKEN_ENTANGLER = 'token_entangler'
