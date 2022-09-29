@@ -25,14 +25,15 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "compile": "tsc",
-    "format": "prettier --write  \"./**/*.ts\""
-
+    "format": "prettier --write  \"./**/*.ts\"",
+    "prepare": "husky install"
   },
   "author": "Boxfish Studio <info@boxfish.studio>",
   "license": "Apache-2.0",
   "devDependencies": {
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "husky": "^8.0.0"
   },
   "lint-staged": {
     "*.{tsx,ts,css}": "prettier --write"

@@ -6,6 +6,7 @@ specifiers:
   '@solana/spl-token': ^0.2.0
   '@solana/web3.js': ^1.50.1
   '@supercharge/promise-pool': ^2.3.2
+  husky: ^8.0.0
   js-file-download: ^0.4.12
   prettier: ^2.7.1
   typescript: ^4.7.4
@@ -19,6 +20,7 @@ dependencies:
   js-file-download: 0.4.12
 
 devDependencies:
+  husky: 8.0.1
   prettier: 2.7.1
   typescript: 4.7.4
 
@@ -524,6 +526,12 @@ packages:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
     dev: false
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
