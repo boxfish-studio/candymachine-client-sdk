@@ -1,23 +1,23 @@
-export const SUPPORTED_IMAGE_TYPES = ["image/png", "image/gif", "image/jpeg"];
+export const SUPPORTED_IMAGE_TYPES = ['image/png', 'image/gif', 'image/jpeg']
 export const SUPPORTED_ANIMATION_TYPES = [
-  "video/mp4",
-  "video/quicktime",
-  "audio/mpeg",
-  "audio/x-flac",
-  "audio/wav",
-  "model/gltf-binary",
-  "text/html",
-];
+	'video/mp4',
+	'video/quicktime',
+	'audio/mpeg',
+	'audio/x-flac',
+	'audio/wav',
+	'model/gltf-binary',
+	'text/html',
+]
 
 export const DEFAULT_GATEKEEPER = {
-  gatekeeperNetwork: "ignREusXmGrscGNUesoU9mxfds9AiYTezUKex2PsZV6",
-  expireOnUse: true,
-};
+	gatekeeperNetwork: 'ignREusXmGrscGNUesoU9mxfds9AiYTezUKex2PsZV6',
+	expireOnUse: true,
+}
 
-export const JSON_EXTENSION = "application/json";
-export const DEFAULT_TIMEOUT = 30000;
-export const NOTIFICATION_TIMEOUT_NEVER = -1;
-export const NOTIFICATION_TIMEOUT_DEFAULT = 5000;
+export const JSON_EXTENSION = 'application/json'
+export const DEFAULT_TIMEOUT = 30000
+export const NOTIFICATION_TIMEOUT_NEVER = -1
+export const NOTIFICATION_TIMEOUT_DEFAULT = 5000
 import { PublicKey } from '@solana/web3.js'
 export const CANDY_MACHINE = 'candy_machine'
 export const AUCTION_HOUSE = 'auction_house'
@@ -47,55 +47,55 @@ export const WRAPPED_SOL_MINT = new PublicKey('So1111111111111111111111111111111
 export const ARWEAVE_UPLOAD_ENDPOINT = 'https://us-central1-metaplex-studios.cloudfunctions.net/uploadFile'
 
 export const CONFIG_ARRAY_START =
-    32 + // authority
-    4 +
-    6 + // uuid + u32 len
-    4 +
-    10 + // u32 len + symbol
-    2 + // seller fee basis points
-    1 +
-    4 +
-    5 * 34 + // optional + u32 len + actual vec
-    8 + //max supply
-    1 + //is mutable
-    1 + // retain authority
-    4 // max number of lines;
+	32 + // authority
+	4 +
+	6 + // uuid + u32 len
+	4 +
+	10 + // u32 len + symbol
+	2 + // seller fee basis points
+	1 +
+	4 +
+	5 * 34 + // optional + u32 len + actual vec
+	8 + //max supply
+	1 + //is mutable
+	1 + // retain authority
+	4 // max number of lines;
 
 export const CONFIG_ARRAY_START_V2 =
-    8 + // key
-    32 + // authority
-    32 + //wallet
-    33 + // token mint
-    4 +
-    6 + // uuid
-    8 + // price
-    8 + // items available
-    9 + // go live
-    10 + // end settings
-    4 +
-    MAX_SYMBOL_LENGTH + // u32 len + symbol
-    2 + // seller fee basis points
-    4 +
-    MAX_CREATOR_LIMIT * MAX_CREATOR_LEN + // optional + u32 len + actual vec
-    8 + //max supply
-    1 + // is mutable
-    1 + // retain authority
-    1 + // option for hidden setting
-    4 +
-    MAX_NAME_LENGTH + // name length,
-    4 +
-    MAX_URI_LENGTH + // uri length,
-    32 + // hash
-    4 + // max number of lines;
-    8 + // items redeemed
-    1 + // whitelist option
-    1 + // whitelist mint mode
-    1 + // allow presale
-    9 + // discount price
-    32 + // mint key for whitelist
-    1 +
-    32 +
-    1 // gatekeeper
+	8 + // key
+	32 + // authority
+	32 + //wallet
+	33 + // token mint
+	4 +
+	6 + // uuid
+	8 + // price
+	8 + // items available
+	9 + // go live
+	10 + // end settings
+	4 +
+	MAX_SYMBOL_LENGTH + // u32 len + symbol
+	2 + // seller fee basis points
+	4 +
+	MAX_CREATOR_LIMIT * MAX_CREATOR_LEN + // optional + u32 len + actual vec
+	8 + //max supply
+	1 + // is mutable
+	1 + // retain authority
+	1 + // option for hidden setting
+	4 +
+	MAX_NAME_LENGTH + // name length,
+	4 +
+	MAX_URI_LENGTH + // uri length,
+	32 + // hash
+	4 + // max number of lines;
+	8 + // items redeemed
+	1 + // whitelist option
+	1 + // whitelist mint mode
+	1 + // allow presale
+	9 + // discount price
+	32 + // mint key for whitelist
+	1 +
+	32 +
+	1 // gatekeeper
 
 export const CONFIG_LINE_SIZE_V2 = 4 + 32 + 4 + 200
 export const CONFIG_LINE_SIZE = 4 + 32 + 4 + 200

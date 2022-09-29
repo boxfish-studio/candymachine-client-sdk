@@ -24,12 +24,18 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc",
+    "format": "prettier --write  \"./**/*.ts\""
+
   },
   "author": "Boxfish Studio <info@boxfish.studio>",
   "license": "Apache-2.0",
   "devDependencies": {
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.{tsx,ts,css}": "prettier --write"
   },
   "dependencies": {
     "@metaplex/arweave-cost": "^1.0.4",
