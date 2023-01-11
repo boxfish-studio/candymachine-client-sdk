@@ -5,7 +5,7 @@ export type Account = string | string[] | undefined
  * This object holds the contents of the asset's JSON file.
  * Represented here in its minimal form.
  */
- export type Manifest = {
+export type Manifest = {
     image: string
     animation_url: string
     name: string
