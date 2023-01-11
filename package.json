@@ -24,7 +24,9 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc",
+    "prepare": "husky install",
+    "format": "prettier --write \"./**/*.{js,ts}\""
   },
   "author": "Boxfish Studio <info@boxfish.studio>",
   "license": "Apache-2.0",
@@ -37,6 +39,14 @@
     "@solana/spl-token": "^0.2.0",
     "@solana/web3.js": "^1.50.1",
     "@supercharge/promise-pool": "^2.3.2",
-    "js-file-download": "^0.4.12"
+    "husky": "^8.0.3",
+    "js-file-download": "^0.4.12",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.2"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write"
+    ]
   }
 }

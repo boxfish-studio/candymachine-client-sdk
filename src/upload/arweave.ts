@@ -1,6 +1,6 @@
 import { calculate } from '@metaplex/arweave-cost'
 import * as anchor from '@project-serum/anchor'
-import { ARWEAVE_PAYMENT_WALLET, ARWEAVE_UPLOAD_ENDPOINT,JSON_EXTENSION } from '../constants'
+import { ARWEAVE_PAYMENT_WALLET, ARWEAVE_UPLOAD_ENDPOINT, JSON_EXTENSION } from '../constants'
 import { Manifest } from '../types'
 import { getFileExtension } from './helpers'
 import { sendTransactionWithRetryWithKeypair } from './transactions'

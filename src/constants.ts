@@ -1,23 +1,23 @@
-export const SUPPORTED_IMAGE_TYPES = ["image/png", "image/gif", "image/jpeg"];
+export const SUPPORTED_IMAGE_TYPES = ['image/png', 'image/gif', 'image/jpeg']
 export const SUPPORTED_ANIMATION_TYPES = [
-  "video/mp4",
-  "video/quicktime",
-  "audio/mpeg",
-  "audio/x-flac",
-  "audio/wav",
-  "model/gltf-binary",
-  "text/html",
-];
+    'video/mp4',
+    'video/quicktime',
+    'audio/mpeg',
+    'audio/x-flac',
+    'audio/wav',
+    'model/gltf-binary',
+    'text/html',
+]
 
 export const DEFAULT_GATEKEEPER = {
-  gatekeeperNetwork: "ignREusXmGrscGNUesoU9mxfds9AiYTezUKex2PsZV6",
-  expireOnUse: true,
-};
+    gatekeeperNetwork: 'ignREusXmGrscGNUesoU9mxfds9AiYTezUKex2PsZV6',
+    expireOnUse: true,
+}
 
-export const JSON_EXTENSION = "application/json";
-export const DEFAULT_TIMEOUT = 30000;
-export const NOTIFICATION_TIMEOUT_NEVER = -1;
-export const NOTIFICATION_TIMEOUT_DEFAULT = 5000;
+export const JSON_EXTENSION = 'application/json'
+export const DEFAULT_TIMEOUT = 30000
+export const NOTIFICATION_TIMEOUT_NEVER = -1
+export const NOTIFICATION_TIMEOUT_DEFAULT = 5000
 import { PublicKey } from '@solana/web3.js'
 export const CANDY_MACHINE = 'candy_machine'
 export const AUCTION_HOUSE = 'auction_house'

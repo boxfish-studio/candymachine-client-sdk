@@ -1,23 +1,19 @@
 import * as anchor from '@project-serum/anchor'
 import { getAccount, getMint, TOKEN_PROGRAM_ID } from '@solana/spl-token'
 import { PublicKey } from '@solana/web3.js'
-import {
-    CANDY_MACHINE_PROGRAM_V2_ID,
-    SUPPORTED_ANIMATION_TYPES,
-    SUPPORTED_IMAGE_TYPES,
-} from '../constants'
+import { CANDY_MACHINE_PROGRAM_V2_ID, SUPPORTED_ANIMATION_TYPES, SUPPORTED_IMAGE_TYPES } from '../constants'
 import { StorageType } from '../enums'
 import { ICandyMachineConfig } from '../interfaces'
 import { JSON_EXTENSION } from '../constants'
 import { getAtaForMint } from '../mint/helpers'
-import {  parseDate } from './helpers'
+import { parseDate } from './helpers'
 
 /**
  * Load the candy program v2..
  * @param provider The anchor provider.
  * @param customRpcUrl (Optional) The custom rpc url of the candy machine.
  * @returns The IDL.
- * 
+ *
  */
 export async function loadCandyProgramV2(provider: anchor.Provider, customRpcUrl?: string) {
     if (customRpcUrl) console.log('USING CUSTOM URL', customRpcUrl)
@@ -132,12 +128,7 @@ export async function getCandyMachineV2Config(
         if (!mintInfo.isInitialized) {
             throw new Error(`The specified spl-token is not initialized`)
         }
-        const tokenAccount = await getAccount(
-            anchorProgram.provider.connection,
-            splTokenAccountKey,
-            undefined,
-            TOKEN_PROGRAM_ID
-        )
+        const tokenAccount = await getAccount(anchorProgram.provider.connection, splTokenAccountKey, undefined, TOKEN_PROGRAM_ID)
         if (!tokenAccount.isInitialized) {
             throw new Error(`The specified spl-token-account is not initialized`)
         }
@@ -229,11 +220,7 @@ export async function getCandyMachineV2Config(
  * @returns {VerifiedAssets} returns an array of verified assets and the number of assets
  */
 
-export function verifyAssets(
-    files: File[],
-    storage: StorageType,
-    number: number
-): { supportedFiles: File[]; elemCount: number } {
+export function verifyAssets(files: File[], storage: StorageType, number: number): { supportedFiles: File[]; elemCount: number } {
     let imageFileCount = 0
     let animationFileCount = 0
     let jsonFileCount = 0
@@ -267,9 +254,7 @@ export function verifyAssets(
             `number of animation files (${animationFileCount}) is different than the number of json files (${jsonFileCount})`
         )
     } else if (imageFileCount !== jsonFileCount) {
-        throw new Error(
-            `number of img files (${imageFileCount}) is different than the number of json files (${jsonFileCount})`
-        )
+        throw new Error(`number of img files (${imageFileCount}) is different than the number of json files (${jsonFileCount})`)
     }
 
     const elemCount = number ? number : imageFileCount
