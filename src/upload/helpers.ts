@@ -1,3 +1,7 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import * as anchor from '@project-serum/anchor'
 import { Keypair, PublicKey, SystemProgram } from '@solana/web3.js'
 import { CANDY_MACHINE_PROGRAM_V2_ID, CONFIG_ARRAY_START_V2, CONFIG_LINE_SIZE_V2 } from '../constants'
@@ -39,20 +43,20 @@ export const createCandyMachineV2 = async function (
     candyData.uuid = uuidFromConfigPubkey(candyAccount.publicKey)
 
     if (!candyData.symbol) {
-        throw new Error(`Invalid config, there must be a symbol.`)
+        throw new Error('Invalid config, there must be a symbol.')
     }
 
     if (!candyData.creators || candyData.creators.length === 0) {
-        throw new Error(`Invalid config, there must be at least one creator.`)
+        throw new Error('Invalid config, there must be at least one creator.')
     }
 
     const totalShare = (candyData.creators || []).reduce((acc, curr) => acc + curr.share, 0)
 
     if (totalShare !== 100) {
-        throw new Error(`Invalid config, creators shares must add up to 100`)
+        throw new Error('Invalid config, creators shares must add up to 100')
     }
 
-    let remainingAccounts: any[] = []
+    const remainingAccounts: any[] = []
     // if (splToken) {
     //   remainingAccounts.push({
     //     pubkey: splToken,
@@ -118,14 +122,8 @@ export async function createCandyMachineV2Account(
     return candyMachineAccount
 }
 
-export const getUnixTs = () => {
-    return new Date().getTime() / 1000
-}
+export const getUnixTs = () => new Date().getTime() / 1000
 
-export const getFileName = (fileName: string) => {
-    return fileName.split('.')[0]
-}
+export const getFileName = (fileName: string) => fileName.split('.')[0]
 
-export const getFileExtension = (fileName: string) => {
-    return fileName.split('.')[1]
-}
+export const getFileExtension = (fileName: string) => fileName.split('.')[1]

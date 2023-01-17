@@ -1,3 +1,10 @@
+/* eslint-disable @typescript-eslint/no-extra-semi */
+/* eslint-disable no-extra-semi */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import * as anchor from '@project-serum/anchor'
 import { getAccount, getMint, TOKEN_PROGRAM_ID } from '@solana/spl-token'
 import { PublicKey } from '@solana/web3.js'
@@ -126,11 +133,11 @@ export async function getCandyMachineV2Config(
 
         const mintInfo = await getMint(anchorProgram.provider.connection, splTokenKey, undefined, TOKEN_PROGRAM_ID)
         if (!mintInfo.isInitialized) {
-            throw new Error(`The specified spl-token is not initialized`)
+            throw new Error('The specified spl-token is not initialized')
         }
         const tokenAccount = await getAccount(anchorProgram.provider.connection, splTokenAccountKey, undefined, TOKEN_PROGRAM_ID)
         if (!tokenAccount.isInitialized) {
-            throw new Error(`The specified spl-token-account is not initialized`)
+            throw new Error('The specified spl-token-account is not initialized')
         }
         if (!tokenAccount.mint.equals(splTokenKey)) {
             throw new Error(

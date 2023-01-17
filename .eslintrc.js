@@ -120,5 +120,5 @@ module.exports = {
         ...eslintRulesOnlyTypescript,
         ...typescriptEslintRules,
     },
-    ignorePatterns: ['.eslintrc.js'],
+    ignorePatterns: ['.eslintrc.js', 'node_modules/', 'dist/'],
 }
