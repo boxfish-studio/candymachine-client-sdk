@@ -22,8 +22,8 @@ type AssetKey = { mediaExt: string; index: string }
 type Env = 'mainnet-beta' | 'devnet'
 
 /**
- * 
- * Upload a new candy machine with the settings passed and cache. 
+ *
+ * Upload a new candy machine with the settings passed and cache.
  * At the end of the upload, the cache can be downloaded.
  */
 export async function uploadV2({
@@ -197,9 +197,7 @@ export async function uploadV2({
     console.info(`[${uploadedItems}] out of [${totalNFTs}] items have been uploaded`)
 
     if (dedupedAssetKeys.length) {
-        console.info(
-            `Starting upload for [${dedupedAssetKeys.length}] items, format ${JSON.stringify(dedupedAssetKeys[0])}`
-        )
+        console.info(`Starting upload for [${dedupedAssetKeys.length}] items, format ${JSON.stringify(dedupedAssetKeys[0])}`)
     }
 
     if (dedupedAssetKeys.length) {
@@ -215,19 +213,12 @@ export async function uploadV2({
 
             .process(async (asset) => {
                 console.log('processing asset: ', asset)
-                const jsonFile = files.find(
-                    (file) => getFileName(file.name) === asset.index && file.type === JSON_EXTENSION
-                )
-                const imageFile = files.find(
-                    (file) => getFileName(file.name) === asset.index && file.type.startsWith('image/')
-                )
+                const jsonFile = files.find((file) => getFileName(file.name) === asset.index && file.type === JSON_EXTENSION)
+                const imageFile = files.find((file) => getFileName(file.name) === asset.index && file.type.startsWith('image/'))
                 if (!jsonFile) {
                     throw new Error(`JSON file ${asset.index}.json is missing`)
                 }
-                const manifest = getAssetManifest(
-                    asset.index,
-                    JSON.parse(await jsonFile?.text()) as unknown as Manifest
-                )
+                const manifest = getAssetManifest(asset.index, JSON.parse(await jsonFile?.text()) as unknown as Manifest)
 
                 // TODO - ADD ANIMATIONS
 
@@ -415,9 +406,7 @@ async function writeIndices({
     await PromisePool.withConcurrency(rateLimit || 5)
         .for(poolArray)
         .handleError(async (err, { index, configLines }) => {
-            console.error(
-                `\nFailed writing indices ${index}-${keys[configLines[configLines.length - 1]]}: ${err.message}`
-            )
+            console.error(`\nFailed writing indices ${index}-${keys[configLines[configLines.length - 1]]}: ${err.message}`)
             await sleep(5000)
             uploadSuccessful = false
         })

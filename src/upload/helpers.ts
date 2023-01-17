@@ -1,10 +1,6 @@
 import * as anchor from '@project-serum/anchor'
 import { Keypair, PublicKey, SystemProgram } from '@solana/web3.js'
-import {
-    CANDY_MACHINE_PROGRAM_V2_ID,
-    CONFIG_ARRAY_START_V2,
-    CONFIG_LINE_SIZE_V2,
-} from '../constants'
+import { CANDY_MACHINE_PROGRAM_V2_ID, CONFIG_ARRAY_START_V2, CONFIG_LINE_SIZE_V2 } from '../constants'
 import { ICandyMachineData } from '../interfaces'
 /**
  * Parse a date.
@@ -21,11 +17,10 @@ export function sleep(milliseconds: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, milliseconds))
 }
 
-
 export function uuidFromConfigPubkey(configAccount: PublicKey) {
     return configAccount.toBase58().slice(0, 6)
 }
-/** 
+/**
  * Create a candy machine v2.
  * @param anchorProgram The anchor program to use.
  * @param payerWallet  The payer wallet to use.
@@ -82,12 +77,7 @@ export const createCandyMachineV2 = async function (
             .signers([candyAccount])
             .remainingAccounts(remainingAccounts)
             .preInstructions([
-                await createCandyMachineV2Account(
-                    anchorProgram,
-                    candyData,
-                    payerWallet.publicKey,
-                    candyAccount.publicKey
-                ),
+                await createCandyMachineV2Account(anchorProgram, candyData, payerWallet.publicKey, candyAccount.publicKey),
             ])
             .rpc(),
     }
@@ -97,7 +87,7 @@ export const createCandyMachineV2 = async function (
 
 /**
  * Create a candy machine v2 account.
- * @param anchorProgram The anchor program to use. 
+ * @param anchorProgram The anchor program to use.
  * @param candyData    The candy machine data to use.
  * @param payerWallet  The payer wallet to use.
  * @param candyAccount  The candy machine account to use.
