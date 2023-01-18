@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/await-thenable */
+/* eslint-disable no-console */
+/* eslint-disable no-return-await */
 import { web3 } from '@project-serum/anchor'
 import { Transaction, SYSVAR_SLOT_HASHES_PUBKEY, SystemProgram } from '@solana/web3.js'
 import { CANDY_MACHINE_PROGRAM_V2_ID, TOKEN_METADATA_PROGRAM_ID, TOKEN_PROGRAM_ID } from '../constants'
@@ -17,12 +22,11 @@ import { sendTransactions, SequenceType } from '../upload/transactions'
  * @returns The collection PDA from a candy Machine
  */
 
-export const getCollectionPDA = async (candyMachineAddress: web3.PublicKey): Promise<[web3.PublicKey, number]> => {
-    return await web3.PublicKey.findProgramAddress(
+export const getCollectionPDA = async (candyMachineAddress: web3.PublicKey): Promise<[web3.PublicKey, number]> =>
+    await web3.PublicKey.findProgramAddress(
         [Buffer.from('collection'), candyMachineAddress.toBuffer()],
         CANDY_MACHINE_PROGRAM_V2_ID
     )
-}
 
 /**
  * Get the collection autrhority record PDA.
@@ -30,8 +34,8 @@ export const getCollectionPDA = async (candyMachineAddress: web3.PublicKey): Pro
  * @param newAuthority  The new authority to set.
  * @returns  The collection autrhority record PDA.
  */
-const getCollectionAuthorityRecordPDA = async (mint: web3.PublicKey, newAuthority: web3.PublicKey): Promise<web3.PublicKey> => {
-    return (
+const getCollectionAuthorityRecordPDA = async (mint: web3.PublicKey, newAuthority: web3.PublicKey): Promise<web3.PublicKey> =>
+    (
         await web3.PublicKey.findProgramAddress(
             [
                 Buffer.from('metadata'),
@@ -43,7 +47,6 @@ const getCollectionAuthorityRecordPDA = async (mint: web3.PublicKey, newAuthorit
             TOKEN_METADATA_PROGRAM_ID
         )
     )[0]
-}
 /**
  * Create the associated token account for a mint.
  * @param candyMachine The candy machine to get the mint of.

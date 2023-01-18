@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-console */
 import { calculate } from '@metaplex/arweave-cost'
 import * as anchor from '@project-serum/anchor'
 import { ARWEAVE_PAYMENT_WALLET, ARWEAVE_UPLOAD_ENDPOINT, JSON_EXTENSION } from '../constants'
