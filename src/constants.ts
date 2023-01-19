@@ -56,15 +56,15 @@ export const CONFIG_ARRAY_START =
     1 +
     4 +
     5 * 34 + // optional + u32 len + actual vec
-    8 + //max supply
-    1 + //is mutable
+    8 + // max supply
+    1 + // is mutable
     1 + // retain authority
     4 // max number of lines;
 
 export const CONFIG_ARRAY_START_V2 =
     8 + // key
     32 + // authority
-    32 + //wallet
+    32 + // wallet
     33 + // token mint
     4 +
     6 + // uuid
@@ -77,7 +77,7 @@ export const CONFIG_ARRAY_START_V2 =
     2 + // seller fee basis points
     4 +
     MAX_CREATOR_LIMIT * MAX_CREATOR_LEN + // optional + u32 len + actual vec
-    8 + //max supply
+    8 + // max supply
     1 + // is mutable
     1 + // retain authority
     1 + // option for hidden setting

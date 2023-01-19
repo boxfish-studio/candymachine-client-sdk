@@ -1,3 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import {
     Blockhash,
     Commitment,
@@ -181,7 +187,7 @@ export async function awaitTransactionSignatureConfirmation(
         err: null,
     }
     let subId = 0
-    // eslint-disable-next-line no-async-promise-executor
+    // eslint-disable-next-line no-async-promise-executor, @typescript-eslint/no-misused-promises
     status = await new Promise(async (resolve, reject) => {
         setTimeout(() => {
             if (done) {
@@ -216,7 +222,7 @@ export async function awaitTransactionSignatureConfirmation(
             console.error('WS error in setup', txid, e)
         }
         while (!done && queryStatus) {
-            // eslint-disable-next-line no-loop-func
+            // eslint-disable-next-line no-loop-func, no-extra-semi, @typescript-eslint/no-extra-semi
             ;(async () => {
                 try {
                     const signatureStatuses = await connection.getSignatureStatuses([txid])
@@ -292,7 +298,7 @@ export const sendTransactions = async (
             continue
         }
 
-        let transaction = new Transaction()
+        const transaction = new Transaction()
         instructions.forEach((instruction) => transaction.add(instruction))
         transaction.recentBlockhash = block.blockhash
         transaction.setSigners(

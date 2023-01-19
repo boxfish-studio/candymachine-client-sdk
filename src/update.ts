@@ -1,3 +1,7 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Program } from '@project-serum/anchor'
 import { PublicKey } from '@solana/web3.js'
 import { ICache, saveCache } from './cache'

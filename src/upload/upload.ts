@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BN, Program, web3 } from '@project-serum/anchor'
 import { PublicKey } from '@solana/web3.js'
 import { PromisePool } from '@supercharge/promise-pool'
@@ -101,7 +106,7 @@ export async function uploadV2({
     // rpcUrl: null | string;
 }): Promise<boolean | string> {
     // const savedContent = loadCache(cacheName, env);
-    let cacheContent: Partial<ICache> = {
+    const cacheContent: Partial<ICache> = {
         program: {
             uuid: '',
             candyMachine: '',
@@ -140,7 +145,7 @@ export async function uploadV2({
             }
 
             // initialize candy
-            console.info(`initializing candy machine`)
+            console.info('initializing candy machine')
             const res = await createCandyMachineV2(
                 anchorProgram,
                 walletKeyPair,
@@ -160,13 +165,11 @@ export async function uploadV2({
                     endSettings,
                     whitelistMintSettings,
                     hiddenSettings,
-                    creators: firstAssetManifest.properties.creators.map((creator) => {
-                        return {
-                            address: new PublicKey(creator.address),
-                            verified: true,
-                            share: creator.share,
-                        }
-                    }),
+                    creators: firstAssetManifest.properties.creators.map((creator) => ({
+                        address: new PublicKey(creator.address),
+                        verified: true,
+                        share: creator.share,
+                    })),
                 }
             )
             console.log('res', res)
@@ -229,6 +232,7 @@ export async function uploadV2({
                     switch (storage) {
                         case StorageType.Arweave:
                         default:
+                            // eslint-disable-next-line no-extra-semi, @typescript-eslint/no-extra-semi
                             ;[link, imageLink] = await arweaveUpload(
                                 walletKeyPair,
                                 anchorProgram,

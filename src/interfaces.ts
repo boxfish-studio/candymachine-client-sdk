@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BN, web3, Program } from '@project-serum/anchor'
 import { PublicKey } from '@solana/web3.js'
 import { DEFAULT_GATEKEEPER } from './constants'

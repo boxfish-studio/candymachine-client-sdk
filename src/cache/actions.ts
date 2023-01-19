@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import fileDownloader from 'js-file-download'
 import { ICache } from './interfaces'
 
