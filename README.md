@@ -1,6 +1,5 @@
-
 <h1 align="center">Candymachine Client SDK</h1>
-<p align="center">A full-featured Solana Metaplex Candymachine client-side library in Typescript</p>
+<p align="center">A full-featured Solana Metaplex Candy Machine V2 client-side library in Typescript</p>
 
 > **Disclaimer:** The SDK is currently a pre-alpha version
 
@@ -8,27 +7,29 @@
 
 The Candymachine Client SDK offers all functionalities of the former Metaplex Candy Machine CLI but on a standalone pure Typescript client-side library that can run on any browser.
 
+> **IMPORTANT:** This SDK is only compatible with the Candy Machine V2. The Candy Machine V1 or V3 are not compatible.
+
 ### Features
 
-- Create a Candy Machine V2 with multiple and configurable settings:
-  - Captcha enabled/disabled.
-  - Mutability on the NFTs.
-  - Price, number of NFTs.
-  - Authority.
-  - NFTs hosted on Arweave.
-  - Time and date to start the minting.
-- Update any Candy Machine V2 in which you are the authority and have the cache file.
-- Explore any Candy Machine V2, view the minted NFTs, remaining NFTs to mint...
-- Mint a NFT from the Candy Machine V2.
-- Available on Solana's Mainnet and Devnet networks.
-- Fully compatible with React and NextJS.
+-   Create a Candy Machine V2 with multiple and configurable settings:
+    -   Captcha enabled/disabled.
+    -   Mutability on the NFTs.
+    -   Price, number of NFTs.
+    -   Authority.
+    -   NFTs hosted on Arweave.
+    -   Time and date to start the minting.
+-   Update any Candy Machine V2 in which you are the authority and have the cache file.
+-   Explore any Candy Machine V2, view the minted NFTs, remaining NFTs to mint...
+-   Mint a NFT from the Candy Machine V2.
+-   Available on Solana's Mainnet and Devnet networks.
+-   Fully compatible with React and NextJS.
 
 ### Built with
 
-- Typescript
-- Metaplex
-- Anchor from Serum
-- Solana web3.js
+-   Typescript
+-   Metaplex
+-   Anchor from Serum
+-   Solana web3.js
 
 <br/>
 
@@ -44,7 +45,7 @@ $ pnpm add @boxfish-studio/candymachine-client-sdk
 
 ## How to use
 
-### Upload your first Candy Machine
+### Upload your first Candy Machine v2
 
 1. Import `uploadV2, loadCandyProgramV2, StorageType, verifyAssets` functions and enums:
 
@@ -151,4 +152,3 @@ This SDK has been built thanks to Metaplex's Candy Machine CLI.
 [Apache 2.0](./LICENSE) &copy; [Boxfish Studio]
 
 [Boxfish Studio]: https://boxfish.studio
-
